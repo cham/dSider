@@ -4,7 +4,7 @@
   "description": "An app that generates d20 lists of things to do",
   "authors": [
     "Dan Neame <danneame@gmail.com>",
-    "Joanne Robert"
+    "Joanne Robert <joanne254@gmail.com>"
   ],
   "private": true,
   "scripts": {
