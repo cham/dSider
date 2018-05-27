@@ -3,8 +3,15 @@
 > An app that generates d20 lists of things to do
 
 ## Build Setup
+nvm is required - https://github.com/creationix/nvm#install-script
 
 ``` bash
+# install the correct node version
+nvm install
+
+# use the correct node version
+nvm use
+
 # install dependencies
 npm install
 
