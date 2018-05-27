@@ -15,7 +15,7 @@ nvm use
 # install dependencies
 npm install
 
-# serve with hot reload at localhost:8080
+# serve as a web app with hot reload at localhost:8080
 npm run dev
 
 # build for production with minification
@@ -23,6 +23,12 @@ npm run build
 
 # build for production and view the bundle analyzer report
 npm run build --report
+
+# build and serve as a client side application via electron
+npm start
+
+# run electron without building Vue
+npm run electron
 ```
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).

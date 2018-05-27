@@ -9,9 +9,13 @@
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
-    "start": "npm run dev",
+    "start": "npm run build && electron .",
+    "electron": "electron .",
     "lint": "eslint --ext .js,.vue src",
-    "build": "node build/build.js"
+    "build": "node build/build.js",
+    "build-package:linux": "npm run build && electron-packager . dSider --overwrite --asar=true --platform=linux --arch=x64 --prune=true --out=release-builds",
+    "build-package:osx": "npm run build && electron-packager . --overwrite --platform=darwin --arch=x64 --prune=true --out=release-builds",
+    "build-package:windows": "npm run build && electron-packager . dSider --overwrite --asar=true --platform=win32 --arch=ia32 --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"dSider\""
   },
   "dependencies": {
     "vue": "^2.5.2",
@@ -31,6 +35,8 @@
     "chalk": "^2.0.1",
     "copy-webpack-plugin": "^4.0.1",
     "css-loader": "^0.28.0",
+    "electron": "^2.0.2",
+    "electron-packager": "^12.1.0",
     "eslint": "^4.15.0",
     "eslint-config-standard": "^10.2.1",
     "eslint-friendly-formatter": "^3.0.0",
